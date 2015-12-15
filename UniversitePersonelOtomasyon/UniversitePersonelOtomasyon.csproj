@@ -50,10 +50,136 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBilimselFaaliyetEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilimselFaaliyetEkle.Designer.cs">
+      <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBilimselFaaliyetler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilimselFaaliyetler.Designer.cs">
+      <DependentUpon>frmBilimselFaaliyetler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBolumAnaBilimSayisalTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBolumAnaBilimSayisalTablosu.Designer.cs">
+      <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenelBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenelBilgiler.Designer.cs">
+      <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIzinBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzinBilgileri.Designer.cs">
+      <DependentUpon>frmIzinBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIzinEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzinEkle.Designer.cs">
+      <DependentUpon>frmIzinEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciEkle.Designer.cs">
+      <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKullaniciYonetim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKullaniciYonetim.Designer.cs">
+      <DependentUpon>frmKullaniciYonetim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgrenimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenimBilgileri.Designer.cs">
+      <DependentUpon>frmOgrenimBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgrenimBilgileriEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenimBilgileriEkleme.Designer.cs">
+      <DependentUpon>frmOgrenimBilgileriEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOzelNot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOzelNot.Designer.cs">
+      <DependentUpon>frmOzelNot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOzelNotEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOzelNotEkle.Designer.cs">
+      <DependentUpon>frmOzelNotEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOzelNotGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOzelNotGuncelle.Designer.cs">
+      <DependentUpon>frmOzelNotGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaglik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaglik.Designer.cs">
+      <DependentUpon>frmSaglik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilimselFaaliyetEkle.resx">
+      <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilimselFaaliyetler.resx">
+      <DependentUpon>frmBilimselFaaliyetler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBolumAnaBilimSayisalTablosu.resx">
+      <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenelBilgiler.resx">
+      <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzinBilgileri.resx">
+      <DependentUpon>frmIzinBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzinEkle.resx">
+      <DependentUpon>frmIzinEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciEkle.resx">
+      <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKullaniciYonetim.resx">
+      <DependentUpon>frmKullaniciYonetim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenimBilgileri.resx">
+      <DependentUpon>frmOgrenimBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenimBilgileriEkleme.resx">
+      <DependentUpon>frmOgrenimBilgileriEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOzelNot.resx">
+      <DependentUpon>frmOzelNot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOzelNotEkle.resx">
+      <DependentUpon>frmOzelNotEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOzelNotGuncelle.resx">
+      <DependentUpon>frmOzelNotGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaglik.resx">
+      <DependentUpon>frmSaglik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -63,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,6 +203,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
