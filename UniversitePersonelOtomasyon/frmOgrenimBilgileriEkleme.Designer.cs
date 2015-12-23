@@ -47,6 +47,8 @@
             this.dateSinav = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtYabanciDil = new System.Windows.Forms.TextBox();
+            this.cmbOgrenimSeviyesi = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.EgitimBilgileri.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -59,12 +61,14 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(305, 247);
+            this.tabControl1.Size = new System.Drawing.Size(305, 268);
             this.tabControl1.TabIndex = 0;
             // 
             // EgitimBilgileri
             // 
             this.EgitimBilgileri.BackColor = System.Drawing.Color.Silver;
+            this.EgitimBilgileri.Controls.Add(this.label8);
+            this.EgitimBilgileri.Controls.Add(this.cmbOgrenimSeviyesi);
             this.EgitimBilgileri.Controls.Add(this.btnKayit);
             this.EgitimBilgileri.Controls.Add(this.dateMezuniyet);
             this.EgitimBilgileri.Controls.Add(this.dateGiris);
@@ -77,7 +81,7 @@
             this.EgitimBilgileri.Location = new System.Drawing.Point(4, 22);
             this.EgitimBilgileri.Name = "EgitimBilgileri";
             this.EgitimBilgileri.Padding = new System.Windows.Forms.Padding(3);
-            this.EgitimBilgileri.Size = new System.Drawing.Size(297, 221);
+            this.EgitimBilgileri.Size = new System.Drawing.Size(297, 242);
             this.EgitimBilgileri.TabIndex = 0;
             this.EgitimBilgileri.Text = "Eğitim";
             // 
@@ -85,7 +89,7 @@
             // 
             this.btnKayit.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
             this.btnKayit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKayit.Location = new System.Drawing.Point(212, 157);
+            this.btnKayit.Location = new System.Drawing.Point(212, 185);
             this.btnKayit.Name = "btnKayit";
             this.btnKayit.Size = new System.Drawing.Size(71, 51);
             this.btnKayit.TabIndex = 9;
@@ -168,7 +172,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(297, 221);
+            this.tabPage2.Size = new System.Drawing.Size(297, 242);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Yabancı Dil";
             // 
@@ -230,11 +234,29 @@
             this.txtYabanciDil.Size = new System.Drawing.Size(172, 20);
             this.txtYabanciDil.TabIndex = 0;
             // 
+            // cmbOgrenimSeviyesi
+            // 
+            this.cmbOgrenimSeviyesi.FormattingEnabled = true;
+            this.cmbOgrenimSeviyesi.Location = new System.Drawing.Point(120, 144);
+            this.cmbOgrenimSeviyesi.Name = "cmbOgrenimSeviyesi";
+            this.cmbOgrenimSeviyesi.Size = new System.Drawing.Size(163, 21);
+            this.cmbOgrenimSeviyesi.TabIndex = 10;
+            this.cmbOgrenimSeviyesi.Text = "Seçiniz";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 152);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Öğrenim Seviyesi";
+            // 
             // frmOgrenimBilgileriEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 245);
+            this.ClientSize = new System.Drawing.Size(303, 272);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmOgrenimBilgileriEkleme";
             this.Text = "frmOgrenimBilgileriEkleme";
@@ -268,5 +290,7 @@
         private System.Windows.Forms.DateTimePicker dateSinav;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtYabanciDil;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbOgrenimSeviyesi;
     }
 }
