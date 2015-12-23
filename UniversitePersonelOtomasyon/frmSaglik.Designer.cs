@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chckSakatlik = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chckSakatlik = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,23 +50,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sağlık Detay";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // chckSakatlik
+            // label2
             // 
-            this.chckSakatlik.AutoSize = true;
-            this.chckSakatlik.Location = new System.Drawing.Point(19, 190);
-            this.chckSakatlik.Name = "chckSakatlik";
-            this.chckSakatlik.Size = new System.Drawing.Size(103, 17);
-            this.chckSakatlik.TabIndex = 1;
-            this.chckSakatlik.Text = "Sakatlık Var Mı?";
-            this.chckSakatlik.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Açıklama";
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(131, 94);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(150, 76);
+            this.textBox2.TabIndex = 4;
             // 
             // label1
             // 
@@ -77,22 +78,22 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Sakatlık Derecesi:   %";
             // 
-            // textBox2
+            // textBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 94);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 76);
-            this.textBox2.TabIndex = 4;
+            this.textBox1.Location = new System.Drawing.Point(131, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // label2
+            // chckSakatlik
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Açıklama";
+            this.chckSakatlik.AutoSize = true;
+            this.chckSakatlik.Location = new System.Drawing.Point(19, 190);
+            this.chckSakatlik.Name = "chckSakatlik";
+            this.chckSakatlik.Size = new System.Drawing.Size(103, 17);
+            this.chckSakatlik.TabIndex = 1;
+            this.chckSakatlik.Text = "Sakatlık Var Mı?";
+            this.chckSakatlik.UseVisualStyleBackColor = true;
             // 
             // frmSaglik
             // 
