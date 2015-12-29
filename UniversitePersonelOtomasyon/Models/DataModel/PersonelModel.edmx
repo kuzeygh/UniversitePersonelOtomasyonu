@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PersonelOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAtamalar">
+          <Key>
+            <PropertyRef Name="atama_ID" />
+          </Key>
+          <Property Name="atama_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="universite" Type="nvarchar" MaxLength="50" />
+          <Property Name="fakulte" Type="nvarchar" MaxLength="50" />
+          <Property Name="bolum" Type="nvarchar" MaxLength="50" />
+          <Property Name="gorev" Type="nvarchar" MaxLength="50" />
+          <Property Name="baslangic_Tarihi" Type="datetime" />
+          <Property Name="bitis_Tarihi" Type="datetime" />
+          <Property Name="durum" Type="bit" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblCezaBilgiler">
+          <Key>
+            <PropertyRef Name="ceza_ID" />
+          </Key>
+          <Property Name="ceza_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ceza" Type="nvarchar" MaxLength="50" />
+          <Property Name="gun_Sayisi" Type="int" />
+          <Property Name="baslangic_Tarihi" Type="datetime" />
+          <Property Name="bitis_Tarihi" Type="datetime" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblCinsiyet">
+          <Key>
+            <PropertyRef Name="cinsiyet_ID" />
+          </Key>
+          <Property Name="cinsiyet_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cinsiyet" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblCocukBilgisi">
+          <Key>
+            <PropertyRef Name="cocuk_ID" />
+          </Key>
+          <Property Name="cocuk_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="cinsiyet" Type="nvarchar" MaxLength="50" />
+          <Property Name="dogum_Tarihi" Type="datetime" />
+          <Property Name="okudugu_Okul" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblDepartman">
+          <Key>
+            <PropertyRef Name="departman_ID" />
+          </Key>
+          <Property Name="departman_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="departman" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblEgitim">
+          <Key>
+            <PropertyRef Name="egitim_ID" />
+          </Key>
+          <Property Name="egitim_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="okul_Adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="bolum" Type="nvarchar" MaxLength="50" />
+          <Property Name="giris_Tarihi" Type="datetime" />
+          <Property Name="mezuniyet_Tarihi" Type="datetime" />
+          <Property Name="ogrenim_seviyesi" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblEvraklar">
+          <Key>
+            <PropertyRef Name="evrak_ID" />
+          </Key>
+          <Property Name="evrak_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="is_Basvuru_Formu" Type="bit" />
+          <Property Name="nufus_Cuzdan_Fotokopisi" Type="bit" />
+          <Property Name="vesikalik" Type="bit" />
+          <Property Name="ikametgah" Type="bit" />
+          <Property Name="saglik_Raporu" Type="bit" />
+          <Property Name="lisans_Basvurusu" Type="bit" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblFaaliyet">
+          <Key>
+            <PropertyRef Name="faaliyet_ID" />
+          </Key>
+          <Property Name="faaliyet_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yayin_Turu" Type="nvarchar" MaxLength="50" />
+          <Property Name="adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="yayin_Tarihi" Type="datetime" />
+          <Property Name="puan" Type="int" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblFakülte">
+          <Key>
+            <PropertyRef Name="fakulte_ID" />
+          </Key>
+          <Property Name="fakulte_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fakutle" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblGorev">
+          <Key>
+            <PropertyRef Name="gorev_ID" />
+          </Key>
+          <Property Name="gorev_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="universite_Adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="fakulte_Adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="bolum_Adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblIdariGorev">
+          <Key>
+            <PropertyRef Name="idare_Gorev_ID" />
+          </Key>
+          <Property Name="idare_Gorev_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gorev" Type="nvarchar" MaxLength="50" />
+          <Property Name="baslangic_Tarihi" Type="datetime" />
+          <Property Name="bitis_Tarihi" Type="datetime" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblIlceler">
+          <Key>
+            <PropertyRef Name="nufusaKayitliOlduguIlce_ID" />
+          </Key>
+          <Property Name="nufusaKayitliOlduguIlce_ID" Type="int" Nullable="false" />
+          <Property Name="nufusaKayitliOlduguIlce" Type="nvarchar" MaxLength="10" />
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblIletisim">
+          <Key>
+            <PropertyRef Name="iletisim_ID" />
+          </Key>
+          <Property Name="iletisim_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ev_Adresi" Type="nvarchar" MaxLength="50" />
+          <Property Name="ev_Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="cep_Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="e_Posta" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblIller">
+          <Key>
+            <PropertyRef Name="nufusaKayitliOlduguIl_ID" />
+          </Key>
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="int" Nullable="false" />
+          <Property Name="nufusaKayitliOlduguIl" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblIzin">
+          <Key>
+            <PropertyRef Name="izin_ID" />
+          </Key>
+          <Property Name="izin_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="izin_Turu" Type="nvarchar" MaxLength="50" />
+          <Property Name="izin_Bilgisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="baslangic_Tarihi" Type="datetime" />
+          <Property Name="bitis_Tarihi" Type="datetime" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblKullanicilar">
+          <Key>
+            <PropertyRef Name="kullanici_ID" />
+          </Key>
+          <Property Name="kullanici_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanici_Ad" Type="nvarchar" MaxLength="20" />
+          <Property Name="kullanici_Sifre" Type="nvarchar" MaxLength="20" />
+          <Property Name="type_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblKullaniciTipi">
+          <Key>
+            <PropertyRef Name="type_ID" />
+          </Key>
+          <Property Name="type_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kullanici_Type" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tblMaas">
+          <Key>
+            <PropertyRef Name="maas_ID" />
+          </Key>
+          <Property Name="maas_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="maas" Type="money" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblMadeniHali">
+          <Key>
+            <PropertyRef Name="madeniHali_ID" />
+          </Key>
+          <Property Name="madeniHali_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="madeniHali" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblNufusBilgiler">
+          <Key>
+            <PropertyRef Name="nufus_ID" />
+          </Key>
+          <Property Name="nufus_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nufusCuzdanNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="tcKimlikNo" Type="nvarchar" MaxLength="11" />
+          <Property Name="babaAdi" Type="nvarchar" MaxLength="10" />
+          <Property Name="anaAdi" Type="nvarchar" MaxLength="10" />
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="int" />
+          <Property Name="nufusaKayitliOlduguIlce_ID" Type="int" />
+          <Property Name="mahKoy" Type="nvarchar" MaxLength="10" />
+          <Property Name="ciltNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="aileSıraNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="sıraNo" Type="nvarchar" MaxLength="10" />
+          <Property Name="DogumYeri" Type="nvarchar" MaxLength="10" />
+          <Property Name="dogumTarihi" Type="date" />
+          <Property Name="uyrugu_ID" Type="int" />
+          <Property Name="madeniHali_ID" Type="int" />
+          <Property Name="verildigiYer" Type="nvarchar" MaxLength="10" />
+          <Property Name="verilisNedeni_ID" Type="int" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblOzelNot">
+          <Key>
+            <PropertyRef Name="ozelNot_ID" />
+          </Key>
+          <Property Name="ozelNot_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ozel_Not" Type="nvarchar" MaxLength="200" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblPersoneller">
+          <Key>
+            <PropertyRef Name="personel_ID" />
+          </Key>
+          <Property Name="personel_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personel_Ad" Type="nvarchar" MaxLength="20" />
+          <Property Name="personel_Soyad" Type="nvarchar" MaxLength="20" />
+          <Property Name="personel_Resim" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_GirisTarihi" Type="date" />
+          <Property Name="statu_ID" Type="int" />
+          <Property Name="cinsiyet_ID" Type="int" />
+          <Property Name="fakulte_ID" Type="int" />
+          <Property Name="departman_ID" Type="int" />
+          <Property Name="unvan_ID" Type="int" />
+          <Property Name="kullanici_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSaglik">
+          <Key>
+            <PropertyRef Name="saglik_ID" />
+          </Key>
+          <Property Name="saglik_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sakatlikVarMı" Type="bit" />
+          <Property Name="sakatlikDerecesi" Type="int" />
+          <Property Name="aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSinif">
+          <Key>
+            <PropertyRef Name="sinif_ID" />
+          </Key>
+          <Property Name="sinif_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ogrenci_Sayisi" Type="int" />
+          <Property Name="sinif" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblStatus">
+          <Key>
+            <PropertyRef Name="statu_ID" />
+          </Key>
+          <Property Name="statu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="statu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblUnvan">
+          <Key>
+            <PropertyRef Name="unvan_ID" />
+          </Key>
+          <Property Name="unvan_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="unvan" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblUyruk">
+          <Key>
+            <PropertyRef Name="uyrugu_ID" />
+          </Key>
+          <Property Name="uyrugu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uyruk" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblVerdigiDersler">
+          <Key>
+            <PropertyRef Name="ders_ID" />
+          </Key>
+          <Property Name="ders_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ders" Type="nvarchar" MaxLength="50" />
+          <Property Name="ders_Baslangic_Saat" Type="nvarchar" MaxLength="50" />
+          <Property Name="ders_Bitis_Saat" Type="nvarchar" MaxLength="50" />
+          <Property Name="ders_Gunu" Type="nvarchar" MaxLength="50" />
+          <Property Name="sinif_ID" Type="int" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblVerilisNedeni">
+          <Key>
+            <PropertyRef Name="verilisNedeni_ID" />
+          </Key>
+          <Property Name="verilisNedeni_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="verilisNedeni" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tblYabanciDil">
+          <Key>
+            <PropertyRef Name="yabanciDil_ID" />
+          </Key>
+          <Property Name="yabanciDil_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="yabanci_Dil" Type="nvarchar" MaxLength="50" />
+          <Property Name="sinav_Tarihi" Type="datetime" />
+          <Property Name="puan" Type="int" />
+          <Property Name="personel_ID" Type="int" />
+        </EntityType>
+        <EntityContainer Name="PersonelOtomasyonDBModelStoreContainer">
+          <EntitySet Name="tblAtamalar" EntityType="Self.tblAtamalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCezaBilgiler" EntityType="Self.tblCezaBilgiler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCinsiyet" EntityType="Self.tblCinsiyet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCocukBilgisi" EntityType="Self.tblCocukBilgisi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDepartman" EntityType="Self.tblDepartman" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEgitim" EntityType="Self.tblEgitim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblEvraklar" EntityType="Self.tblEvraklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFaaliyet" EntityType="Self.tblFaaliyet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFakülte" EntityType="Self.tblFakülte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblGorev" EntityType="Self.tblGorev" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIdariGorev" EntityType="Self.tblIdariGorev" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIlceler" EntityType="Self.tblIlceler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIletisim" EntityType="Self.tblIletisim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIller" EntityType="Self.tblIller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblIzin" EntityType="Self.tblIzin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblKullanicilar" EntityType="Self.tblKullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblKullaniciTipi" EntityType="Self.tblKullaniciTipi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMaas" EntityType="Self.tblMaas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMadeniHali" EntityType="Self.tblMadeniHali" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblNufusBilgiler" EntityType="Self.tblNufusBilgiler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblOzelNot" EntityType="Self.tblOzelNot" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPersoneller" EntityType="Self.tblPersoneller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSaglik" EntityType="Self.tblSaglik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSinif" EntityType="Self.tblSinif" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStatus" EntityType="Self.tblStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUnvan" EntityType="Self.tblUnvan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUyruk" EntityType="Self.tblUyruk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVerdigiDersler" EntityType="Self.tblVerdigiDersler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVerilisNedeni" EntityType="Self.tblVerilisNedeni" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblYabanciDil" EntityType="Self.tblYabanciDil" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonelOtomasyonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblAtamalar">
+          <Key>
+            <PropertyRef Name="atama_ID" />
+          </Key>
+          <Property Name="atama_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="universite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fakulte" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bolum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="baslangic_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="bitis_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="durum" Type="Boolean" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblCezaBilgiler">
+          <Key>
+            <PropertyRef Name="ceza_ID" />
+          </Key>
+          <Property Name="ceza_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ceza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gun_Sayisi" Type="Int32" />
+          <Property Name="baslangic_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="bitis_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblCinsiyet">
+          <Key>
+            <PropertyRef Name="cinsiyet_ID" />
+          </Key>
+          <Property Name="cinsiyet_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblCocukBilgisi">
+          <Key>
+            <PropertyRef Name="cocuk_ID" />
+          </Key>
+          <Property Name="cocuk_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dogum_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="okudugu_Okul" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblDepartman">
+          <Key>
+            <PropertyRef Name="departman_ID" />
+          </Key>
+          <Property Name="departman_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="departman" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblEgitim">
+          <Key>
+            <PropertyRef Name="egitim_ID" />
+          </Key>
+          <Property Name="egitim_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="okul_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bolum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="giris_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="mezuniyet_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="ogrenim_seviyesi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblEvraklar">
+          <Key>
+            <PropertyRef Name="evrak_ID" />
+          </Key>
+          <Property Name="evrak_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="is_Basvuru_Formu" Type="Boolean" />
+          <Property Name="nufus_Cuzdan_Fotokopisi" Type="Boolean" />
+          <Property Name="vesikalik" Type="Boolean" />
+          <Property Name="ikametgah" Type="Boolean" />
+          <Property Name="saglik_Raporu" Type="Boolean" />
+          <Property Name="lisans_Basvurusu" Type="Boolean" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblFaaliyet">
+          <Key>
+            <PropertyRef Name="faaliyet_ID" />
+          </Key>
+          <Property Name="faaliyet_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yayin_Turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="yayin_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="puan" Type="Int32" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblFakülte">
+          <Key>
+            <PropertyRef Name="fakulte_ID" />
+          </Key>
+          <Property Name="fakulte_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fakutle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblGorev">
+          <Key>
+            <PropertyRef Name="gorev_ID" />
+          </Key>
+          <Property Name="gorev_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="universite_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fakulte_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bolum_Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblIdariGorev">
+          <Key>
+            <PropertyRef Name="idare_Gorev_ID" />
+          </Key>
+          <Property Name="idare_Gorev_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gorev" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="baslangic_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="bitis_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblIlceler">
+          <Key>
+            <PropertyRef Name="nufusaKayitliOlduguIlce_ID" />
+          </Key>
+          <Property Name="nufusaKayitliOlduguIlce_ID" Type="Int32" Nullable="false" />
+          <Property Name="nufusaKayitliOlduguIlce" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblIletisim">
+          <Key>
+            <PropertyRef Name="iletisim_ID" />
+          </Key>
+          <Property Name="iletisim_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ev_Adresi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ev_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cep_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="e_Posta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblIller">
+          <Key>
+            <PropertyRef Name="nufusaKayitliOlduguIl_ID" />
+          </Key>
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="Int32" Nullable="false" />
+          <Property Name="nufusaKayitliOlduguIl" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblIzin">
+          <Key>
+            <PropertyRef Name="izin_ID" />
+          </Key>
+          <Property Name="izin_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="izin_Turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="izin_Bilgisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="baslangic_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="bitis_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblKullanicilar">
+          <Key>
+            <PropertyRef Name="kullanici_ID" />
+          </Key>
+          <Property Name="kullanici_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="kullanici_Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="type_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblKullaniciTipi">
+          <Key>
+            <PropertyRef Name="type_ID" />
+          </Key>
+          <Property Name="type_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kullanici_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblMaas">
+          <Key>
+            <PropertyRef Name="maas_ID" />
+          </Key>
+          <Property Name="maas_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="maas" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblMadeniHali">
+          <Key>
+            <PropertyRef Name="madeniHali_ID" />
+          </Key>
+          <Property Name="madeniHali_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="madeniHali" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblNufusBilgiler">
+          <Key>
+            <PropertyRef Name="nufus_ID" />
+          </Key>
+          <Property Name="nufus_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nufusCuzdanNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="tcKimlikNo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="babaAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="anaAdi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="nufusaKayitliOlduguIl_ID" Type="Int32" />
+          <Property Name="nufusaKayitliOlduguIlce_ID" Type="Int32" />
+          <Property Name="mahKoy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ciltNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="aileSıraNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="sıraNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DogumYeri" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="dogumTarihi" Type="DateTime" Precision="0" />
+          <Property Name="uyrugu_ID" Type="Int32" />
+          <Property Name="madeniHali_ID" Type="Int32" />
+          <Property Name="verildigiYer" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="verilisNedeni_ID" Type="Int32" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblOzelNot">
+          <Key>
+            <PropertyRef Name="ozelNot_ID" />
+          </Key>
+          <Property Name="ozelNot_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ozel_Not" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblPersoneller">
+          <Key>
+            <PropertyRef Name="personel_ID" />
+          </Key>
+          <Property Name="personel_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personel_Ad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="personel_Soyad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="personel_Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_GirisTarihi" Type="DateTime" Precision="0" />
+          <Property Name="statu_ID" Type="Int32" />
+          <Property Name="cinsiyet_ID" Type="Int32" />
+          <Property Name="fakulte_ID" Type="Int32" />
+          <Property Name="departman_ID" Type="Int32" />
+          <Property Name="unvan_ID" Type="Int32" />
+          <Property Name="kullanici_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblSaglik">
+          <Key>
+            <PropertyRef Name="saglik_ID" />
+          </Key>
+          <Property Name="saglik_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sakatlikVarMı" Type="Boolean" />
+          <Property Name="sakatlikDerecesi" Type="Int32" />
+          <Property Name="aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblSinif">
+          <Key>
+            <PropertyRef Name="sinif_ID" />
+          </Key>
+          <Property Name="sinif_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ogrenci_Sayisi" Type="Int32" />
+          <Property Name="sinif" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblStatus">
+          <Key>
+            <PropertyRef Name="statu_ID" />
+          </Key>
+          <Property Name="statu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="statu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblUnvan">
+          <Key>
+            <PropertyRef Name="unvan_ID" />
+          </Key>
+          <Property Name="unvan_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="unvan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblUyruk">
+          <Key>
+            <PropertyRef Name="uyrugu_ID" />
+          </Key>
+          <Property Name="uyrugu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uyruk" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblVerdigiDersler">
+          <Key>
+            <PropertyRef Name="ders_ID" />
+          </Key>
+          <Property Name="ders_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ders" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ders_Baslangic_Saat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ders_Bitis_Saat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ders_Gunu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sinif_ID" Type="Int32" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblVerilisNedeni">
+          <Key>
+            <PropertyRef Name="verilisNedeni_ID" />
+          </Key>
+          <Property Name="verilisNedeni_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="verilisNedeni" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblYabanciDil">
+          <Key>
+            <PropertyRef Name="yabanciDil_ID" />
+          </Key>
+          <Property Name="yabanciDil_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="yabanci_Dil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sinav_Tarihi" Type="DateTime" Precision="3" />
+          <Property Name="puan" Type="Int32" />
+          <Property Name="personel_ID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="PersonelOtomasyonDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAtamalar" EntityType="Self.tblAtamalar" />
+          <EntitySet Name="tblCezaBilgiler" EntityType="Self.tblCezaBilgiler" />
+          <EntitySet Name="tblCinsiyet" EntityType="Self.tblCinsiyet" />
+          <EntitySet Name="tblCocukBilgisi" EntityType="Self.tblCocukBilgisi" />
+          <EntitySet Name="tblDepartman" EntityType="Self.tblDepartman" />
+          <EntitySet Name="tblEgitim" EntityType="Self.tblEgitim" />
+          <EntitySet Name="tblEvraklar" EntityType="Self.tblEvraklar" />
+          <EntitySet Name="tblFaaliyet" EntityType="Self.tblFaaliyet" />
+          <EntitySet Name="tblFakülte" EntityType="Self.tblFakülte" />
+          <EntitySet Name="tblGorev" EntityType="Self.tblGorev" />
+          <EntitySet Name="tblIdariGorev" EntityType="Self.tblIdariGorev" />
+          <EntitySet Name="tblIlceler" EntityType="Self.tblIlceler" />
+          <EntitySet Name="tblIletisim" EntityType="Self.tblIletisim" />
+          <EntitySet Name="tblIller" EntityType="Self.tblIller" />
+          <EntitySet Name="tblIzin" EntityType="Self.tblIzin" />
+          <EntitySet Name="tblKullanicilar" EntityType="Self.tblKullanicilar" />
+          <EntitySet Name="tblKullaniciTipi" EntityType="Self.tblKullaniciTipi" />
+          <EntitySet Name="tblMaas" EntityType="Self.tblMaas" />
+          <EntitySet Name="tblMadeniHali" EntityType="Self.tblMadeniHali" />
+          <EntitySet Name="tblNufusBilgiler" EntityType="Self.tblNufusBilgiler" />
+          <EntitySet Name="tblOzelNot" EntityType="Self.tblOzelNot" />
+          <EntitySet Name="tblPersoneller" EntityType="Self.tblPersoneller" />
+          <EntitySet Name="tblSaglik" EntityType="Self.tblSaglik" />
+          <EntitySet Name="tblSinif" EntityType="Self.tblSinif" />
+          <EntitySet Name="tblStatus" EntityType="Self.tblStatus" />
+          <EntitySet Name="tblUnvan" EntityType="Self.tblUnvan" />
+          <EntitySet Name="tblUyruk" EntityType="Self.tblUyruk" />
+          <EntitySet Name="tblVerdigiDersler" EntityType="Self.tblVerdigiDersler" />
+          <EntitySet Name="tblVerilisNedeni" EntityType="Self.tblVerilisNedeni" />
+          <EntitySet Name="tblYabanciDil" EntityType="Self.tblYabanciDil" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PersonelOtomasyonDBModelStoreContainer" CdmEntityContainer="PersonelOtomasyonDBEntities">
+          <EntitySetMapping Name="tblAtamalar">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblAtamalar">
+              <MappingFragment StoreEntitySet="tblAtamalar">
+                <ScalarProperty Name="atama_ID" ColumnName="atama_ID" />
+                <ScalarProperty Name="universite" ColumnName="universite" />
+                <ScalarProperty Name="fakulte" ColumnName="fakulte" />
+                <ScalarProperty Name="bolum" ColumnName="bolum" />
+                <ScalarProperty Name="gorev" ColumnName="gorev" />
+                <ScalarProperty Name="baslangic_Tarihi" ColumnName="baslangic_Tarihi" />
+                <ScalarProperty Name="bitis_Tarihi" ColumnName="bitis_Tarihi" />
+                <ScalarProperty Name="durum" ColumnName="durum" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCezaBilgiler">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblCezaBilgiler">
+              <MappingFragment StoreEntitySet="tblCezaBilgiler">
+                <ScalarProperty Name="ceza_ID" ColumnName="ceza_ID" />
+                <ScalarProperty Name="ceza" ColumnName="ceza" />
+                <ScalarProperty Name="gun_Sayisi" ColumnName="gun_Sayisi" />
+                <ScalarProperty Name="baslangic_Tarihi" ColumnName="baslangic_Tarihi" />
+                <ScalarProperty Name="bitis_Tarihi" ColumnName="bitis_Tarihi" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCinsiyet">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblCinsiyet">
+              <MappingFragment StoreEntitySet="tblCinsiyet">
+                <ScalarProperty Name="cinsiyet_ID" ColumnName="cinsiyet_ID" />
+                <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCocukBilgisi">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblCocukBilgisi">
+              <MappingFragment StoreEntitySet="tblCocukBilgisi">
+                <ScalarProperty Name="cocuk_ID" ColumnName="cocuk_ID" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+                <ScalarProperty Name="dogum_Tarihi" ColumnName="dogum_Tarihi" />
+                <ScalarProperty Name="okudugu_Okul" ColumnName="okudugu_Okul" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDepartman">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblDepartman">
+              <MappingFragment StoreEntitySet="tblDepartman">
+                <ScalarProperty Name="departman_ID" ColumnName="departman_ID" />
+                <ScalarProperty Name="departman" ColumnName="departman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEgitim">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblEgitim">
+              <MappingFragment StoreEntitySet="tblEgitim">
+                <ScalarProperty Name="egitim_ID" ColumnName="egitim_ID" />
+                <ScalarProperty Name="okul_Adi" ColumnName="okul_Adi" />
+                <ScalarProperty Name="bolum" ColumnName="bolum" />
+                <ScalarProperty Name="giris_Tarihi" ColumnName="giris_Tarihi" />
+                <ScalarProperty Name="mezuniyet_Tarihi" ColumnName="mezuniyet_Tarihi" />
+                <ScalarProperty Name="ogrenim_seviyesi" ColumnName="ogrenim_seviyesi" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEvraklar">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblEvraklar">
+              <MappingFragment StoreEntitySet="tblEvraklar">
+                <ScalarProperty Name="evrak_ID" ColumnName="evrak_ID" />
+                <ScalarProperty Name="is_Basvuru_Formu" ColumnName="is_Basvuru_Formu" />
+                <ScalarProperty Name="nufus_Cuzdan_Fotokopisi" ColumnName="nufus_Cuzdan_Fotokopisi" />
+                <ScalarProperty Name="vesikalik" ColumnName="vesikalik" />
+                <ScalarProperty Name="ikametgah" ColumnName="ikametgah" />
+                <ScalarProperty Name="saglik_Raporu" ColumnName="saglik_Raporu" />
+                <ScalarProperty Name="lisans_Basvurusu" ColumnName="lisans_Basvurusu" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFaaliyet">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblFaaliyet">
+              <MappingFragment StoreEntitySet="tblFaaliyet">
+                <ScalarProperty Name="faaliyet_ID" ColumnName="faaliyet_ID" />
+                <ScalarProperty Name="yayin_Turu" ColumnName="yayin_Turu" />
+                <ScalarProperty Name="adi" ColumnName="adi" />
+                <ScalarProperty Name="yayin_Tarihi" ColumnName="yayin_Tarihi" />
+                <ScalarProperty Name="puan" ColumnName="puan" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFakülte">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblFakülte">
+              <MappingFragment StoreEntitySet="tblFakülte">
+                <ScalarProperty Name="fakulte_ID" ColumnName="fakulte_ID" />
+                <ScalarProperty Name="fakutle" ColumnName="fakutle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblGorev">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblGorev">
+              <MappingFragment StoreEntitySet="tblGorev">
+                <ScalarProperty Name="gorev_ID" ColumnName="gorev_ID" />
+                <ScalarProperty Name="universite_Adi" ColumnName="universite_Adi" />
+                <ScalarProperty Name="fakulte_Adi" ColumnName="fakulte_Adi" />
+                <ScalarProperty Name="bolum_Adi" ColumnName="bolum_Adi" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIdariGorev">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblIdariGorev">
+              <MappingFragment StoreEntitySet="tblIdariGorev">
+                <ScalarProperty Name="idare_Gorev_ID" ColumnName="idare_Gorev_ID" />
+                <ScalarProperty Name="gorev" ColumnName="gorev" />
+                <ScalarProperty Name="baslangic_Tarihi" ColumnName="baslangic_Tarihi" />
+                <ScalarProperty Name="bitis_Tarihi" ColumnName="bitis_Tarihi" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIlceler">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblIlceler">
+              <MappingFragment StoreEntitySet="tblIlceler">
+                <ScalarProperty Name="nufusaKayitliOlduguIlce_ID" ColumnName="nufusaKayitliOlduguIlce_ID" />
+                <ScalarProperty Name="nufusaKayitliOlduguIlce" ColumnName="nufusaKayitliOlduguIlce" />
+                <ScalarProperty Name="nufusaKayitliOlduguIl_ID" ColumnName="nufusaKayitliOlduguIl_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIletisim">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblIletisim">
+              <MappingFragment StoreEntitySet="tblIletisim">
+                <ScalarProperty Name="iletisim_ID" ColumnName="iletisim_ID" />
+                <ScalarProperty Name="ev_Adresi" ColumnName="ev_Adresi" />
+                <ScalarProperty Name="ev_Tel" ColumnName="ev_Tel" />
+                <ScalarProperty Name="cep_Tel" ColumnName="cep_Tel" />
+                <ScalarProperty Name="e_Posta" ColumnName="e_Posta" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIller">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblIller">
+              <MappingFragment StoreEntitySet="tblIller">
+                <ScalarProperty Name="nufusaKayitliOlduguIl_ID" ColumnName="nufusaKayitliOlduguIl_ID" />
+                <ScalarProperty Name="nufusaKayitliOlduguIl" ColumnName="nufusaKayitliOlduguIl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblIzin">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblIzin">
+              <MappingFragment StoreEntitySet="tblIzin">
+                <ScalarProperty Name="izin_ID" ColumnName="izin_ID" />
+                <ScalarProperty Name="izin_Turu" ColumnName="izin_Turu" />
+                <ScalarProperty Name="izin_Bilgisi" ColumnName="izin_Bilgisi" />
+                <ScalarProperty Name="baslangic_Tarihi" ColumnName="baslangic_Tarihi" />
+                <ScalarProperty Name="bitis_Tarihi" ColumnName="bitis_Tarihi" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKullanicilar">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblKullanicilar">
+              <MappingFragment StoreEntitySet="tblKullanicilar">
+                <ScalarProperty Name="kullanici_ID" ColumnName="kullanici_ID" />
+                <ScalarProperty Name="kullanici_Ad" ColumnName="kullanici_Ad" />
+                <ScalarProperty Name="kullanici_Sifre" ColumnName="kullanici_Sifre" />
+                <ScalarProperty Name="type_ID" ColumnName="type_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblKullaniciTipi">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblKullaniciTipi">
+              <MappingFragment StoreEntitySet="tblKullaniciTipi">
+                <ScalarProperty Name="type_ID" ColumnName="type_ID" />
+                <ScalarProperty Name="kullanici_Type" ColumnName="kullanici_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMaas">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblMaas">
+              <MappingFragment StoreEntitySet="tblMaas">
+                <ScalarProperty Name="maas_ID" ColumnName="maas_ID" />
+                <ScalarProperty Name="maas" ColumnName="maas" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMadeniHali">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblMadeniHali">
+              <MappingFragment StoreEntitySet="tblMadeniHali">
+                <ScalarProperty Name="madeniHali_ID" ColumnName="madeniHali_ID" />
+                <ScalarProperty Name="madeniHali" ColumnName="madeniHali" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblNufusBilgiler">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblNufusBilgiler">
+              <MappingFragment StoreEntitySet="tblNufusBilgiler">
+                <ScalarProperty Name="nufus_ID" ColumnName="nufus_ID" />
+                <ScalarProperty Name="nufusCuzdanNo" ColumnName="nufusCuzdanNo" />
+                <ScalarProperty Name="tcKimlikNo" ColumnName="tcKimlikNo" />
+                <ScalarProperty Name="babaAdi" ColumnName="babaAdi" />
+                <ScalarProperty Name="anaAdi" ColumnName="anaAdi" />
+                <ScalarProperty Name="nufusaKayitliOlduguIl_ID" ColumnName="nufusaKayitliOlduguIl_ID" />
+                <ScalarProperty Name="nufusaKayitliOlduguIlce_ID" ColumnName="nufusaKayitliOlduguIlce_ID" />
+                <ScalarProperty Name="mahKoy" ColumnName="mahKoy" />
+                <ScalarProperty Name="ciltNo" ColumnName="ciltNo" />
+                <ScalarProperty Name="aileSıraNo" ColumnName="aileSıraNo" />
+                <ScalarProperty Name="sıraNo" ColumnName="sıraNo" />
+                <ScalarProperty Name="DogumYeri" ColumnName="DogumYeri" />
+                <ScalarProperty Name="dogumTarihi" ColumnName="dogumTarihi" />
+                <ScalarProperty Name="uyrugu_ID" ColumnName="uyrugu_ID" />
+                <ScalarProperty Name="madeniHali_ID" ColumnName="madeniHali_ID" />
+                <ScalarProperty Name="verildigiYer" ColumnName="verildigiYer" />
+                <ScalarProperty Name="verilisNedeni_ID" ColumnName="verilisNedeni_ID" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOzelNot">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblOzelNot">
+              <MappingFragment StoreEntitySet="tblOzelNot">
+                <ScalarProperty Name="ozelNot_ID" ColumnName="ozelNot_ID" />
+                <ScalarProperty Name="ozel_Not" ColumnName="ozel_Not" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPersoneller">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblPersoneller">
+              <MappingFragment StoreEntitySet="tblPersoneller">
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+                <ScalarProperty Name="personel_Ad" ColumnName="personel_Ad" />
+                <ScalarProperty Name="personel_Soyad" ColumnName="personel_Soyad" />
+                <ScalarProperty Name="personel_Resim" ColumnName="personel_Resim" />
+                <ScalarProperty Name="personel_GirisTarihi" ColumnName="personel_GirisTarihi" />
+                <ScalarProperty Name="statu_ID" ColumnName="statu_ID" />
+                <ScalarProperty Name="cinsiyet_ID" ColumnName="cinsiyet_ID" />
+                <ScalarProperty Name="fakulte_ID" ColumnName="fakulte_ID" />
+                <ScalarProperty Name="departman_ID" ColumnName="departman_ID" />
+                <ScalarProperty Name="unvan_ID" ColumnName="unvan_ID" />
+                <ScalarProperty Name="kullanici_ID" ColumnName="kullanici_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSaglik">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblSaglik">
+              <MappingFragment StoreEntitySet="tblSaglik">
+                <ScalarProperty Name="saglik_ID" ColumnName="saglik_ID" />
+                <ScalarProperty Name="sakatlikVarMı" ColumnName="sakatlikVarMı" />
+                <ScalarProperty Name="sakatlikDerecesi" ColumnName="sakatlikDerecesi" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSinif">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblSinif">
+              <MappingFragment StoreEntitySet="tblSinif">
+                <ScalarProperty Name="sinif_ID" ColumnName="sinif_ID" />
+                <ScalarProperty Name="ogrenci_Sayisi" ColumnName="ogrenci_Sayisi" />
+                <ScalarProperty Name="sinif" ColumnName="sinif" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStatus">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblStatus">
+              <MappingFragment StoreEntitySet="tblStatus">
+                <ScalarProperty Name="statu_ID" ColumnName="statu_ID" />
+                <ScalarProperty Name="statu" ColumnName="statu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUnvan">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblUnvan">
+              <MappingFragment StoreEntitySet="tblUnvan">
+                <ScalarProperty Name="unvan_ID" ColumnName="unvan_ID" />
+                <ScalarProperty Name="unvan" ColumnName="unvan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUyruk">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblUyruk">
+              <MappingFragment StoreEntitySet="tblUyruk">
+                <ScalarProperty Name="uyrugu_ID" ColumnName="uyrugu_ID" />
+                <ScalarProperty Name="uyruk" ColumnName="uyruk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVerdigiDersler">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblVerdigiDersler">
+              <MappingFragment StoreEntitySet="tblVerdigiDersler">
+                <ScalarProperty Name="ders_ID" ColumnName="ders_ID" />
+                <ScalarProperty Name="ders" ColumnName="ders" />
+                <ScalarProperty Name="ders_Baslangic_Saat" ColumnName="ders_Baslangic_Saat" />
+                <ScalarProperty Name="ders_Bitis_Saat" ColumnName="ders_Bitis_Saat" />
+                <ScalarProperty Name="ders_Gunu" ColumnName="ders_Gunu" />
+                <ScalarProperty Name="sinif_ID" ColumnName="sinif_ID" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVerilisNedeni">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblVerilisNedeni">
+              <MappingFragment StoreEntitySet="tblVerilisNedeni">
+                <ScalarProperty Name="verilisNedeni_ID" ColumnName="verilisNedeni_ID" />
+                <ScalarProperty Name="verilisNedeni" ColumnName="verilisNedeni" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblYabanciDil">
+            <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblYabanciDil">
+              <MappingFragment StoreEntitySet="tblYabanciDil">
+                <ScalarProperty Name="yabanciDil_ID" ColumnName="yabanciDil_ID" />
+                <ScalarProperty Name="yabanci_Dil" ColumnName="yabanci_Dil" />
+                <ScalarProperty Name="sinav_Tarihi" ColumnName="sinav_Tarihi" />
+                <ScalarProperty Name="puan" ColumnName="puan" />
+                <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

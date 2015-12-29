@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSifre = new System.Windows.Forms.TextBox();
-            this.chckFakulteSekreteri = new System.Windows.Forms.CheckBox();
             this.btnKullaniciEkleme = new System.Windows.Forms.Button();
+            this.chckFakulteSekreteri = new System.Windows.Forms.CheckBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,37 +53,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanici Bilgileri";
             // 
-            // txtKullaniciAdi
+            // btnKullaniciEkleme
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(101, 32);
-            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(153, 20);
-            this.txtKullaniciAdi.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Kullanıcı Adı";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Şifre";
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(101, 68);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(153, 20);
-            this.txtSifre.TabIndex = 3;
+            this.btnKullaniciEkleme.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
+            this.btnKullaniciEkleme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKullaniciEkleme.Location = new System.Drawing.Point(183, 135);
+            this.btnKullaniciEkleme.Name = "btnKullaniciEkleme";
+            this.btnKullaniciEkleme.Size = new System.Drawing.Size(71, 51);
+            this.btnKullaniciEkleme.TabIndex = 11;
+            this.btnKullaniciEkleme.UseVisualStyleBackColor = true;
+            this.btnKullaniciEkleme.Click += new System.EventHandler(this.btnKullaniciEkleme_Click);
             // 
             // chckFakulteSekreteri
             // 
@@ -95,15 +74,37 @@
             this.chckFakulteSekreteri.Text = "Fakülte Sekreteri";
             this.chckFakulteSekreteri.UseVisualStyleBackColor = true;
             // 
-            // btnKullaniciEkleme
+            // txtSifre
             // 
-            this.btnKullaniciEkleme.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
-            this.btnKullaniciEkleme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKullaniciEkleme.Location = new System.Drawing.Point(183, 135);
-            this.btnKullaniciEkleme.Name = "btnKullaniciEkleme";
-            this.btnKullaniciEkleme.Size = new System.Drawing.Size(71, 51);
-            this.btnKullaniciEkleme.TabIndex = 11;
-            this.btnKullaniciEkleme.UseVisualStyleBackColor = true;
+            this.txtSifre.Location = new System.Drawing.Point(101, 68);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(153, 20);
+            this.txtSifre.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Şifre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Kullanıcı Adı";
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(101, 32);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(153, 20);
+            this.txtKullaniciAdi.TabIndex = 0;
             // 
             // frmKullaniciEkle
             // 

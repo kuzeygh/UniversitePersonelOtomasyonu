@@ -47,8 +47,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\S\KullaniciIslemleri.cs" />
     <Compile Include="frmBilimselFaaliyetEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +152,112 @@
     <Compile Include="frmSaglik.Designer.cs">
       <DependentUpon>frmSaglik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataModel\PersonelModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\PersonelModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\PersonelModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblAtamalar.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblCezaBilgiler.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblCinsiyet.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblCocukBilgisi.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblDepartman.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblEgitim.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblEvraklar.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblFaaliyet.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblFakülte.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblGorev.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblIdariGorev.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblIlceler.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblIletisim.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblIller.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblIzin.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblKullanicilar.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblKullaniciTipi.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblMaas.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblMadeniHali.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblNufusBilgiler.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblOzelNot.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblPersoneller.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblSaglik.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblSinif.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblStatus.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblUnvan.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblUyruk.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblVerdigiDersler.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblVerilisNedeni.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel\tblYabanciDil.cs">
+      <DependentUpon>PersonelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModel\S\KullaniciView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBilimselFaaliyetEkle.resx">
@@ -197,6 +312,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="Models\DataModel\PersonelModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PersonelModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\DataModel\PersonelModel.edmx.diagram">
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -250,6 +373,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>PersonelOtomasyonDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Models\DataModel\PersonelModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+      <LastGenOutput>PersonelModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DataModel\PersonelModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PersonelModel.edmx</DependentUpon>
+      <LastGenOutput>PersonelModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="PersonelOtomasyonDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PersonelOtomasyonDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>PersonelOtomasyonDB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
