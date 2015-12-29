@@ -68,88 +68,88 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\S\KullaniciIslemleri.cs" />
-    <Compile Include="frmBilimselFaaliyetEkle.cs">
+    <Compile Include="Formlar\S\frmBilimselFaaliyetEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBilimselFaaliyetEkle.Designer.cs">
+    <Compile Include="Formlar\S\frmBilimselFaaliyetEkle.Designer.cs">
       <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBilimselFaaliyetler.cs">
+    <Compile Include="Formlar\S\frmBilimselFaaliyetler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBilimselFaaliyetler.Designer.cs">
+    <Compile Include="Formlar\S\frmBilimselFaaliyetler.Designer.cs">
       <DependentUpon>frmBilimselFaaliyetler.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBolumAnaBilimSayisalTablosu.cs">
+    <Compile Include="Formlar\S\frmBolumAnaBilimSayisalTablosu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBolumAnaBilimSayisalTablosu.Designer.cs">
+    <Compile Include="Formlar\S\frmBolumAnaBilimSayisalTablosu.Designer.cs">
       <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGenelBilgiler.cs">
+    <Compile Include="Formlar\S\frmGenelBilgiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGenelBilgiler.Designer.cs">
+    <Compile Include="Formlar\S\frmGenelBilgiler.Designer.cs">
       <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIzinBilgileri.cs">
+    <Compile Include="Formlar\S\frmIzinBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIzinBilgileri.Designer.cs">
+    <Compile Include="Formlar\S\frmIzinBilgileri.Designer.cs">
       <DependentUpon>frmIzinBilgileri.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmIzinEkle.cs">
+    <Compile Include="Formlar\S\frmIzinEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIzinEkle.Designer.cs">
+    <Compile Include="Formlar\S\frmIzinEkle.Designer.cs">
       <DependentUpon>frmIzinEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKullaniciEkle.cs">
+    <Compile Include="Formlar\S\frmKullaniciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKullaniciEkle.Designer.cs">
+    <Compile Include="Formlar\S\frmKullaniciEkle.Designer.cs">
       <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKullaniciYonetim.cs">
+    <Compile Include="Formlar\S\frmKullaniciYonetim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKullaniciYonetim.Designer.cs">
+    <Compile Include="Formlar\S\frmKullaniciYonetim.Designer.cs">
       <DependentUpon>frmKullaniciYonetim.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOgrenimBilgileri.cs">
+    <Compile Include="Formlar\S\frmOgrenimBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOgrenimBilgileri.Designer.cs">
+    <Compile Include="Formlar\S\frmOgrenimBilgileri.Designer.cs">
       <DependentUpon>frmOgrenimBilgileri.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOgrenimBilgileriEkleme.cs">
+    <Compile Include="Formlar\S\frmOgrenimBilgileriEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOgrenimBilgileriEkleme.Designer.cs">
+    <Compile Include="Formlar\S\frmOgrenimBilgileriEkleme.Designer.cs">
       <DependentUpon>frmOgrenimBilgileriEkleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOzelNot.cs">
+    <Compile Include="Formlar\S\frmOzelNot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOzelNot.Designer.cs">
+    <Compile Include="Formlar\S\frmOzelNot.Designer.cs">
       <DependentUpon>frmOzelNot.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOzelNotEkle.cs">
+    <Compile Include="Formlar\S\frmOzelNotEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOzelNotEkle.Designer.cs">
+    <Compile Include="Formlar\S\frmOzelNotEkle.Designer.cs">
       <DependentUpon>frmOzelNotEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOzelNotGuncelle.cs">
+    <Compile Include="Formlar\S\frmOzelNotGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOzelNotGuncelle.Designer.cs">
+    <Compile Include="Formlar\S\frmOzelNotGuncelle.Designer.cs">
       <DependentUpon>frmOzelNotGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSaglik.cs">
+    <Compile Include="Formlar\S\frmSaglik.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSaglik.Designer.cs">
+    <Compile Include="Formlar\S\frmSaglik.Designer.cs">
       <DependentUpon>frmSaglik.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DataModel\PersonelModel.Context.cs">
@@ -260,46 +260,46 @@
     <Compile Include="Models\ViewModel\S\KullaniciView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBilimselFaaliyetEkle.resx">
+    <EmbeddedResource Include="Formlar\S\frmBilimselFaaliyetEkle.resx">
       <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBilimselFaaliyetler.resx">
+    <EmbeddedResource Include="Formlar\S\frmBilimselFaaliyetler.resx">
       <DependentUpon>frmBilimselFaaliyetler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBolumAnaBilimSayisalTablosu.resx">
+    <EmbeddedResource Include="Formlar\S\frmBolumAnaBilimSayisalTablosu.resx">
       <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGenelBilgiler.resx">
+    <EmbeddedResource Include="Formlar\S\frmGenelBilgiler.resx">
       <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIzinBilgileri.resx">
+    <EmbeddedResource Include="Formlar\S\frmIzinBilgileri.resx">
       <DependentUpon>frmIzinBilgileri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmIzinEkle.resx">
+    <EmbeddedResource Include="Formlar\S\frmIzinEkle.resx">
       <DependentUpon>frmIzinEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKullaniciEkle.resx">
+    <EmbeddedResource Include="Formlar\S\frmKullaniciEkle.resx">
       <DependentUpon>frmKullaniciEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKullaniciYonetim.resx">
+    <EmbeddedResource Include="Formlar\S\frmKullaniciYonetim.resx">
       <DependentUpon>frmKullaniciYonetim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOgrenimBilgileri.resx">
+    <EmbeddedResource Include="Formlar\S\frmOgrenimBilgileri.resx">
       <DependentUpon>frmOgrenimBilgileri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOgrenimBilgileriEkleme.resx">
+    <EmbeddedResource Include="Formlar\S\frmOgrenimBilgileriEkleme.resx">
       <DependentUpon>frmOgrenimBilgileriEkleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOzelNot.resx">
+    <EmbeddedResource Include="Formlar\S\frmOzelNot.resx">
       <DependentUpon>frmOzelNot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOzelNotEkle.resx">
+    <EmbeddedResource Include="Formlar\S\frmOzelNotEkle.resx">
       <DependentUpon>frmOzelNotEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOzelNotGuncelle.resx">
+    <EmbeddedResource Include="Formlar\S\frmOzelNotGuncelle.resx">
       <DependentUpon>frmOzelNotGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSaglik.resx">
+    <EmbeddedResource Include="Formlar\S\frmSaglik.resx">
       <DependentUpon>frmSaglik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
