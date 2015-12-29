@@ -67,7 +67,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\M\MamiKatmanı.cs" />
     <Compile Include="BL\S\KullaniciIslemleri.cs" />
+    <Compile Include="Formlar\M\frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\M\frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\S\frmBilimselFaaliyetEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +267,9 @@
     <Compile Include="Models\ViewModel\S\KullaniciView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\M\frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\S\frmBilimselFaaliyetEkle.resx">
       <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
     </EmbeddedResource>
