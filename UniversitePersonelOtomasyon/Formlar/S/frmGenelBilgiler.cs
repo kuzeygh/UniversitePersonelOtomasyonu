@@ -22,5 +22,10 @@ namespace UniversitePersonelOtomasyon
             frmSaglik saglik = new frmSaglik();
             saglik.Show();
         }
+
+        private void frmGenelBilgiler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

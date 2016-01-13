@@ -61,6 +61,7 @@
             this.btnOzelNotKayit.Size = new System.Drawing.Size(71, 51);
             this.btnOzelNotKayit.TabIndex = 10;
             this.btnOzelNotKayit.UseVisualStyleBackColor = true;
+            this.btnOzelNotKayit.Click += new System.EventHandler(this.btnOzelNotKayit_Click);
             // 
             // frmOzelNotEkle
             // 

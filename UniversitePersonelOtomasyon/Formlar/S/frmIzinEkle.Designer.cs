@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbIzinTuru = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIzinBilgisi = new System.Windows.Forms.TextBox();
-            this.dateIzinBaslangic = new System.Windows.Forms.DateTimePicker();
-            this.dateIzinBitis = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnIzınEkle = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateIzinBitis = new System.Windows.Forms.DateTimePicker();
+            this.dateIzinBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.txtIzinBilgisi = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbIzinTuru = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,63 +59,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İzin Ekle";
             // 
-            // cmbIzinTuru
+            // btnIzınEkle
             // 
-            this.cmbIzinTuru.FormattingEnabled = true;
-            this.cmbIzinTuru.Location = new System.Drawing.Point(121, 36);
-            this.cmbIzinTuru.Name = "cmbIzinTuru";
-            this.cmbIzinTuru.Size = new System.Drawing.Size(158, 21);
-            this.cmbIzinTuru.TabIndex = 0;
-            this.cmbIzinTuru.Text = "Seçiniz";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "İzin Türü";
-            // 
-            // txtIzinBilgisi
-            // 
-            this.txtIzinBilgisi.Location = new System.Drawing.Point(121, 133);
-            this.txtIzinBilgisi.Multiline = true;
-            this.txtIzinBilgisi.Name = "txtIzinBilgisi";
-            this.txtIzinBilgisi.Size = new System.Drawing.Size(158, 58);
-            this.txtIzinBilgisi.TabIndex = 2;
-            // 
-            // dateIzinBaslangic
-            // 
-            this.dateIzinBaslangic.Location = new System.Drawing.Point(121, 69);
-            this.dateIzinBaslangic.Name = "dateIzinBaslangic";
-            this.dateIzinBaslangic.Size = new System.Drawing.Size(158, 20);
-            this.dateIzinBaslangic.TabIndex = 3;
-            // 
-            // dateIzinBitis
-            // 
-            this.dateIzinBitis.Location = new System.Drawing.Point(121, 101);
-            this.dateIzinBitis.Name = "dateIzinBitis";
-            this.dateIzinBitis.Size = new System.Drawing.Size(158, 20);
-            this.dateIzinBitis.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Başlangıç";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Bitiş";
+            this.btnIzınEkle.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
+            this.btnIzınEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzınEkle.Location = new System.Drawing.Point(208, 203);
+            this.btnIzınEkle.Name = "btnIzınEkle";
+            this.btnIzınEkle.Size = new System.Drawing.Size(71, 51);
+            this.btnIzınEkle.TabIndex = 10;
+            this.btnIzınEkle.UseVisualStyleBackColor = true;
+            this.btnIzınEkle.Click += new System.EventHandler(this.btnIzınEkle_Click);
             // 
             // label4
             // 
@@ -126,15 +79,65 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "İzin Bilgisi";
             // 
-            // btnIzınEkle
+            // label3
             // 
-            this.btnIzınEkle.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
-            this.btnIzınEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIzınEkle.Location = new System.Drawing.Point(208, 203);
-            this.btnIzınEkle.Name = "btnIzınEkle";
-            this.btnIzınEkle.Size = new System.Drawing.Size(71, 51);
-            this.btnIzınEkle.TabIndex = 10;
-            this.btnIzınEkle.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Bitiş";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Başlangıç";
+            // 
+            // dateIzinBitis
+            // 
+            this.dateIzinBitis.Location = new System.Drawing.Point(121, 101);
+            this.dateIzinBitis.Name = "dateIzinBitis";
+            this.dateIzinBitis.Size = new System.Drawing.Size(158, 20);
+            this.dateIzinBitis.TabIndex = 4;
+            this.dateIzinBitis.ValueChanged += new System.EventHandler(this.dateIzinBitis_ValueChanged);
+            // 
+            // dateIzinBaslangic
+            // 
+            this.dateIzinBaslangic.Location = new System.Drawing.Point(121, 69);
+            this.dateIzinBaslangic.Name = "dateIzinBaslangic";
+            this.dateIzinBaslangic.Size = new System.Drawing.Size(158, 20);
+            this.dateIzinBaslangic.TabIndex = 3;
+            this.dateIzinBaslangic.ValueChanged += new System.EventHandler(this.dateIzinBaslangic_ValueChanged);
+            // 
+            // txtIzinBilgisi
+            // 
+            this.txtIzinBilgisi.Location = new System.Drawing.Point(121, 133);
+            this.txtIzinBilgisi.Multiline = true;
+            this.txtIzinBilgisi.Name = "txtIzinBilgisi";
+            this.txtIzinBilgisi.Size = new System.Drawing.Size(158, 58);
+            this.txtIzinBilgisi.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "İzin Türü";
+            // 
+            // cmbIzinTuru
+            // 
+            this.cmbIzinTuru.FormattingEnabled = true;
+            this.cmbIzinTuru.Location = new System.Drawing.Point(121, 36);
+            this.cmbIzinTuru.Name = "cmbIzinTuru";
+            this.cmbIzinTuru.Size = new System.Drawing.Size(158, 21);
+            this.cmbIzinTuru.TabIndex = 0;
+            this.cmbIzinTuru.Text = "Seçiniz";
             // 
             // frmIzinEkle
             // 

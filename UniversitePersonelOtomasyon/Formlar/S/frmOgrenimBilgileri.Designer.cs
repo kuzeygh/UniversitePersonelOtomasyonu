@@ -54,6 +54,9 @@
             // 
             // dataGridEgitim
             // 
+            this.dataGridEgitim.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridEgitim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEgitim.Location = new System.Drawing.Point(6, 19);
             this.dataGridEgitim.Name = "dataGridEgitim";
@@ -72,6 +75,9 @@
             // 
             // dataGridYabanciDil
             // 
+            this.dataGridYabanciDil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridYabanciDil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridYabanciDil.Location = new System.Drawing.Point(6, 19);
             this.dataGridYabanciDil.Name = "dataGridYabanciDil";
@@ -130,6 +136,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOgrenimBilgileri";
             this.Text = "frmOgrenimBilgileri";
+            this.Load += new System.EventHandler(this.frmOgrenimBilgileri_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEgitim)).EndInit();
             this.groupBox2.ResumeLayout(false);

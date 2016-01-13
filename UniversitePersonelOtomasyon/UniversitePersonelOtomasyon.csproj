@@ -47,10 +47,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocX, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.0.0.19\lib\net40\DocX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -68,12 +73,88 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\M\MamiKatmanı.cs" />
+    <Compile Include="BL\S\BilimselFaaliyet.cs" />
+    <Compile Include="BL\S\BolumAnaBilimSayisalTablosu.cs" />
+    <Compile Include="BL\S\CezaIslemleri.cs" />
+    <Compile Include="BL\S\EgitimIslemleri.cs" />
+    <Compile Include="BL\S\GenelBilgiler.cs" />
+    <Compile Include="BL\S\istenAyrilan.cs" />
+    <Compile Include="BL\S\IzinBilgileri.cs" />
     <Compile Include="BL\S\KullaniciIslemleri.cs" />
+    <Compile Include="BL\S\OzelNotIslemleri.cs" />
+    <Compile Include="BL\S\VerdigiDersler.cs" />
+    <Compile Include="BL\T\RaporIslem.cs" />
+    <Compile Include="Formlar\i\frmAkademikPersonelSayi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmAkademikPersonelSayi.Designer.cs">
+      <DependentUpon>frmAkademikPersonelSayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmCocukBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmCocukBilgileri.Designer.cs">
+      <DependentUpon>frmCocukBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmCocukEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmCocukEkle.Designer.cs">
+      <DependentUpon>frmCocukEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmEvrak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmEvrak.Designer.cs">
+      <DependentUpon>frmEvrak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmEvraklariEksikPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmEvraklariEksikPersonel.Designer.cs">
+      <DependentUpon>frmEvraklariEksikPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmIdariGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmIdariGorevler.Designer.cs">
+      <DependentUpon>frmIdariGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmKurumIciIdariGorev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmKurumIciIdariGorev.Designer.cs">
+      <DependentUpon>frmKurumIciIdariGorev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\i\frmNufusBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\i\frmNufusBilgileri.Designer.cs">
+      <DependentUpon>frmNufusBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\M\frmGiris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\M\frmGiris.Designer.cs">
       <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\M\frmParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\M\frmParent.Designer.cs">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\M\frmPersonelArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\M\frmPersonelArama.Designer.cs">
+      <DependentUpon>frmPersonelArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\M\frmPersonelKayitDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\M\frmPersonelKayitDuzenleme.Designer.cs">
+      <DependentUpon>frmPersonelKayitDuzenleme.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\S\frmBilimselFaaliyetEkle.cs">
       <SubType>Form</SubType>
@@ -93,11 +174,29 @@
     <Compile Include="Formlar\S\frmBolumAnaBilimSayisalTablosu.Designer.cs">
       <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\S\frmCeza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\S\frmCeza.Designer.cs">
+      <DependentUpon>frmCeza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\S\frmCezaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\S\frmCezaEkle.Designer.cs">
+      <DependentUpon>frmCezaEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\S\frmGenelBilgiler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formlar\S\frmGenelBilgiler.Designer.cs">
       <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\S\frmIstenAyrilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\S\frmIstenAyrilan.Designer.cs">
+      <DependentUpon>frmIstenAyrilan.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\S\frmIzinBilgileri.cs">
       <SubType>Form</SubType>
@@ -158,6 +257,42 @@
     </Compile>
     <Compile Include="Formlar\S\frmSaglik.Designer.cs">
       <DependentUpon>frmSaglik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\S\frmVerdigiDersler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\S\frmVerdigiDersler.Designer.cs">
+      <DependentUpon>frmVerdigiDersler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\S\frmVerdigiDerslerEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\S\frmVerdigiDerslerEkle.Designer.cs">
+      <DependentUpon>frmVerdigiDerslerEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\T\frmMaasBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\T\frmMaasBilgileri.Designer.cs">
+      <DependentUpon>frmMaasBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\T\frmMaasEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\T\frmMaasEkle.Designer.cs">
+      <DependentUpon>frmMaasEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\T\frmSaglikBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\T\frmSaglikBilgileri.Designer.cs">
+      <DependentUpon>frmSaglikBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\T\frmİletisimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\T\frmİletisimBilgileri.Designer.cs">
+      <DependentUpon>frmİletisimBilgileri.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DataModel\PersonelModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -264,11 +399,45 @@
     <Compile Include="Models\DataModel\tblYabanciDil.cs">
       <DependentUpon>PersonelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\S\CezaView.cs" />
+    <Compile Include="Models\ViewModel\S\DersView.cs" />
+    <Compile Include="Models\ViewModel\S\BilimselFaaliyetView.cs" />
+    <Compile Include="Models\ViewModel\S\BolumAnaBilimSayisalTabloView.cs" />
+    <Compile Include="Models\ViewModel\S\EgitimView.cs" />
+    <Compile Include="Models\ViewModel\S\GenelBilgilerView.cs" />
+    <Compile Include="Models\ViewModel\S\IzinView.cs" />
     <Compile Include="Models\ViewModel\S\KullaniciView.cs" />
+    <Compile Include="Models\ViewModel\S\OzelNotView.cs" />
+    <Compile Include="Models\ViewModel\S\SaglikView.cs" />
+    <Compile Include="Models\ViewModel\S\YabanciDilView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\i\frmAkademikPersonelSayi.resx">
+      <DependentUpon>frmAkademikPersonelSayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\i\frmEvrak.resx">
+      <DependentUpon>frmEvrak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\i\frmEvraklariEksikPersonel.resx">
+      <DependentUpon>frmEvraklariEksikPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\i\frmIdariGorevler.resx">
+      <DependentUpon>frmIdariGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\i\frmKurumIciIdariGorev.resx">
+      <DependentUpon>frmKurumIciIdariGorev.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\M\frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\M\frmParent.resx">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\M\frmPersonelArama.resx">
+      <DependentUpon>frmPersonelArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\M\frmPersonelKayitDuzenleme.resx">
+      <DependentUpon>frmPersonelKayitDuzenleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\S\frmBilimselFaaliyetEkle.resx">
       <DependentUpon>frmBilimselFaaliyetEkle.cs</DependentUpon>
@@ -278,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\S\frmBolumAnaBilimSayisalTablosu.resx">
       <DependentUpon>frmBolumAnaBilimSayisalTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\S\frmCeza.resx">
+      <DependentUpon>frmCeza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\S\frmGenelBilgiler.resx">
       <DependentUpon>frmGenelBilgiler.cs</DependentUpon>
@@ -311,6 +483,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\S\frmSaglik.resx">
       <DependentUpon>frmSaglik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\T\frmMaasBilgileri.resx">
+      <DependentUpon>frmMaasBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\T\frmSaglikBilgileri.resx">
+      <DependentUpon>frmSaglikBilgileri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -404,6 +582,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

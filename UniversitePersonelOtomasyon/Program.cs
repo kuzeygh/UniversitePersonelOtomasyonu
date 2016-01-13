@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using UniversitePersonelOtomasyon.Formlar.M;
 namespace UniversitePersonelOtomasyon
 {
     static class Program
@@ -16,7 +16,7 @@ namespace UniversitePersonelOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKullaniciEkle());
+            Application.Run(new frmGiris());
         }
     }
 }

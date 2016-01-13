@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3e86ee23a13040038c92bdbc640b738a" Name="Diagram1">
+      <Diagram DiagramId="94a15de01d8143b48234d4fca0a9fbc3" Name="Diagram1">
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblAtamalar" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblCezaBilgiler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblCinsiyet" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
@@ -18,23 +18,23 @@
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIdariGorev" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIlceler" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIletisim" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIller" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIzin" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblKullanicilar" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblKullaniciTipi" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblMaas" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblMadeniHali" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblNufusBilgiler" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblOzelNot" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblPersoneller" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblSaglik" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblSinif" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblStatus" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblUnvan" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblUyruk" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblVerdigiDersler" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblVerilisNedeni" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblYabanciDil" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIller" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblIzin" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblKullanicilar" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblKullaniciTipi" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblMaas" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblMadeniHali" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblNufusBilgiler" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblOzelNot" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblPersoneller" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblSaglik" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblSinif" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblStatus" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblUnvan" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblUyruk" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblVerdigiDersler" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblVerilisNedeni" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonelOtomasyonDBModel.tblYabanciDil" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

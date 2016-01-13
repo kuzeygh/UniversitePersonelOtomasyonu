@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversitePersonelOtomasyon.Models.DataModel;
+using UniversitePersonelOtomasyon.Models.ViewModel.S;
+using UniversitePersonelOtomasyon.Formlar.M;
+using UniversitePersonelOtomasyon.BL.S;
+
 
 namespace UniversitePersonelOtomasyon
 {
@@ -27,6 +32,21 @@ namespace UniversitePersonelOtomasyon
         {
             frmOzelNotGuncelle ONG = new frmOzelNotGuncelle();
             ONG.Show();
+        }
+
+        private void frmOzelNot_Load(object sender, EventArgs e)
+        {          
+            List<tblOzelNot> ON = OzelNotIslemleri.OzelNotGetir(frmPersonelKayitDuzenleme.Personel_kullaniciAdı.ToString());
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Ozet Not ID");
+            dt.Columns.Add("Ozel Not");
+
+            foreach(var item in ON)
+            {
+                dt.Rows.Add(item.ozelNot_ID, item.ozel_Not);
+            }
+
+            dataGridOzelNot.DataSource = dt;
         }
     }
 }

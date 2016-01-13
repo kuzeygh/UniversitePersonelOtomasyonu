@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.EgitimBilgileri = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbOgrenimSeviyesi = new System.Windows.Forms.ComboBox();
             this.btnKayit = new System.Windows.Forms.Button();
             this.dateMezuniyet = new System.Windows.Forms.DateTimePicker();
             this.dateGiris = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +49,6 @@
             this.dateSinav = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtYabanciDil = new System.Windows.Forms.TextBox();
-            this.cmbOgrenimSeviyesi = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.EgitimBilgileri.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -85,6 +85,24 @@
             this.EgitimBilgileri.TabIndex = 0;
             this.EgitimBilgileri.Text = "Eğitim";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 152);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Öğrenim Seviyesi";
+            // 
+            // cmbOgrenimSeviyesi
+            // 
+            this.cmbOgrenimSeviyesi.FormattingEnabled = true;
+            this.cmbOgrenimSeviyesi.Location = new System.Drawing.Point(120, 144);
+            this.cmbOgrenimSeviyesi.Name = "cmbOgrenimSeviyesi";
+            this.cmbOgrenimSeviyesi.Size = new System.Drawing.Size(163, 21);
+            this.cmbOgrenimSeviyesi.TabIndex = 10;
+            this.cmbOgrenimSeviyesi.Text = "Seçiniz";
+            // 
             // btnKayit
             // 
             this.btnKayit.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
@@ -94,6 +112,7 @@
             this.btnKayit.Size = new System.Drawing.Size(71, 51);
             this.btnKayit.TabIndex = 9;
             this.btnKayit.UseVisualStyleBackColor = true;
+            this.btnKayit.Click += new System.EventHandler(this.btnKayit_Click);
             // 
             // dateMezuniyet
             // 
@@ -101,6 +120,7 @@
             this.dateMezuniyet.Name = "dateMezuniyet";
             this.dateMezuniyet.Size = new System.Drawing.Size(163, 20);
             this.dateMezuniyet.TabIndex = 8;
+            this.dateMezuniyet.ValueChanged += new System.EventHandler(this.dateMezuniyet_ValueChanged);
             // 
             // dateGiris
             // 
@@ -108,6 +128,7 @@
             this.dateGiris.Name = "dateGiris";
             this.dateGiris.Size = new System.Drawing.Size(163, 20);
             this.dateGiris.TabIndex = 7;
+            this.dateGiris.ValueChanged += new System.EventHandler(this.dateGiris_ValueChanged);
             // 
             // txtBolum
             // 
@@ -185,6 +206,7 @@
             this.btnYabanciDilEkle.Size = new System.Drawing.Size(71, 51);
             this.btnYabanciDilEkle.TabIndex = 10;
             this.btnYabanciDilEkle.UseVisualStyleBackColor = true;
+            this.btnYabanciDilEkle.Click += new System.EventHandler(this.btnYabanciDilEkle_Click);
             // 
             // label7
             // 
@@ -217,6 +239,7 @@
             this.dateSinav.Name = "dateSinav";
             this.dateSinav.Size = new System.Drawing.Size(172, 20);
             this.dateSinav.TabIndex = 2;
+            this.dateSinav.ValueChanged += new System.EventHandler(this.dateSinav_ValueChanged);
             // 
             // label5
             // 
@@ -233,24 +256,6 @@
             this.txtYabanciDil.Name = "txtYabanciDil";
             this.txtYabanciDil.Size = new System.Drawing.Size(172, 20);
             this.txtYabanciDil.TabIndex = 0;
-            // 
-            // cmbOgrenimSeviyesi
-            // 
-            this.cmbOgrenimSeviyesi.FormattingEnabled = true;
-            this.cmbOgrenimSeviyesi.Location = new System.Drawing.Point(120, 144);
-            this.cmbOgrenimSeviyesi.Name = "cmbOgrenimSeviyesi";
-            this.cmbOgrenimSeviyesi.Size = new System.Drawing.Size(163, 21);
-            this.cmbOgrenimSeviyesi.TabIndex = 10;
-            this.cmbOgrenimSeviyesi.Text = "Seçiniz";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 152);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Öğrenim Seviyesi";
             // 
             // frmOgrenimBilgileriEkleme
             // 

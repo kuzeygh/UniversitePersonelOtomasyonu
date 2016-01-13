@@ -13,10 +13,10 @@ namespace UniversitePersonelOtomasyon.Models.DataModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PersonelOtomasyonDBEntities : DbContext
+    public partial class PersonelOtomasyonDBEntities2 : DbContext
     {
-        public PersonelOtomasyonDBEntities()
-            : base("name=PersonelOtomasyonDBEntities")
+        public PersonelOtomasyonDBEntities2()
+            : base("name=PersonelOtomasyonDBEntities2")
         {
         }
     

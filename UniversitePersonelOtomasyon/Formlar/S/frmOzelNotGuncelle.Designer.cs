@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOzelNotDegistir = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +67,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Özel Not Güncelleme";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 90);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(394, 242);
-            this.textBox1.TabIndex = 2;
-            // 
             // btnOzelNotDegistir
             // 
             this.btnOzelNotDegistir.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.update;
@@ -84,6 +76,15 @@
             this.btnOzelNotDegistir.Size = new System.Drawing.Size(58, 47);
             this.btnOzelNotDegistir.TabIndex = 8;
             this.btnOzelNotDegistir.UseVisualStyleBackColor = true;
+            this.btnOzelNotDegistir.Click += new System.EventHandler(this.btnOzelNotDegistir_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 90);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(394, 242);
+            this.textBox1.TabIndex = 2;
             // 
             // frmOzelNotGuncelle
             // 
@@ -93,6 +94,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOzelNotGuncelle";
             this.Text = "frmOzelNotGuncelle";
+            this.Load += new System.EventHandler(this.frmOzelNotGuncelle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

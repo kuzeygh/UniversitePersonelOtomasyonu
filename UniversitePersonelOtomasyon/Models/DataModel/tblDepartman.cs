@@ -16,5 +16,6 @@ namespace UniversitePersonelOtomasyon.Models.DataModel
     {
         public int departman_ID { get; set; }
         public string departman { get; set; }
+        public Nullable<int> fakulte_ID { get; set; }
     }
 }

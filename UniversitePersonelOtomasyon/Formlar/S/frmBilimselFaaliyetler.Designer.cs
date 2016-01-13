@@ -47,6 +47,9 @@
             // 
             // dataGridFaaliyetler
             // 
+            this.dataGridFaaliyetler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridFaaliyetler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridFaaliyetler.Location = new System.Drawing.Point(6, 19);
             this.dataGridFaaliyetler.Name = "dataGridFaaliyetler";
@@ -55,9 +58,10 @@
             // 
             // btnFaaliyetEkle
             // 
+            this.btnFaaliyetEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFaaliyetEkle.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.add;
             this.btnFaaliyetEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFaaliyetEkle.Location = new System.Drawing.Point(614, 12);
+            this.btnFaaliyetEkle.Location = new System.Drawing.Point(614, 11);
             this.btnFaaliyetEkle.Name = "btnFaaliyetEkle";
             this.btnFaaliyetEkle.Size = new System.Drawing.Size(58, 47);
             this.btnFaaliyetEkle.TabIndex = 7;
@@ -73,6 +77,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBilimselFaaliyetler";
             this.Text = "frmBilimselFaaliyetler";
+            this.Load += new System.EventHandler(this.frmBilimselFaaliyetler_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFaaliyetler)).EndInit();
             this.ResumeLayout(false);

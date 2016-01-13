@@ -47,6 +47,9 @@
             // 
             // dataGridIzın
             // 
+            this.dataGridIzın.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridIzın.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridIzın.Location = new System.Drawing.Point(6, 19);
             this.dataGridIzın.Name = "dataGridIzın";
@@ -55,6 +58,7 @@
             // 
             // bntIzınEkle
             // 
+            this.bntIzınEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bntIzınEkle.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.add;
             this.bntIzınEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntIzınEkle.Location = new System.Drawing.Point(625, 9);
@@ -73,6 +77,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmIzinBilgileri";
             this.Text = "frmIzinBilgileri";
+            this.Load += new System.EventHandler(this.frmIzinBilgileri_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIzın)).EndInit();
             this.ResumeLayout(false);

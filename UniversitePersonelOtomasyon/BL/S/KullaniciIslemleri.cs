@@ -14,7 +14,7 @@ namespace UniversitePersonelOtomasyon.BL.S
         {
             try
             {
-                using(PersonelOtomasyonDBEntities db = new PersonelOtomasyonDBEntities())
+                using(PersonelOtomasyonDBEntities2 db = new PersonelOtomasyonDBEntities2())
                 {
                     tblKullanicilar K = new tblKullanicilar();
                     K.kullanici_Ad = Kullanici.KAd;
@@ -27,6 +27,29 @@ namespace UniversitePersonelOtomasyon.BL.S
             }catch(Exception e)
             {
                 return "No";
+            }
+        }
+
+        public static List<tblKullanicilar> KullaniciGetir()
+        {
+            try
+            {
+                using (PersonelOtomasyonDBEntities2 db = new PersonelOtomasyonDBEntities2())
+                {
+                    List<tblKullanicilar> KV = new List<tblKullanicilar>();
+
+                    var kullanicilar = (from i in db.tblKullanicilar
+                                        select i).ToList();
+
+                    foreach(var i in kullanicilar)
+                    {
+                        KV.Add(i);
+                    }
+                    return KV;
+                }
+            }catch(Exception e)
+            {
+                return null;
             }
         }
     }

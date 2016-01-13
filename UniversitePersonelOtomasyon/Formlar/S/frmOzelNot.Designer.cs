@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtOzelNot = new System.Windows.Forms.TextBox();
+            this.dataGridOzelNot = new System.Windows.Forms.DataGridView();
             this.bntOzelNotGuncelle = new System.Windows.Forms.Button();
             this.btnOzelNotEkle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOzelNot)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtOzelNot);
+            this.groupBox1.Controls.Add(this.dataGridOzelNot);
             this.groupBox1.Location = new System.Drawing.Point(12, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(677, 327);
@@ -45,13 +46,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Özel Not";
             // 
-            // txtOzelNot
+            // dataGridOzelNot
             // 
-            this.txtOzelNot.Location = new System.Drawing.Point(6, 19);
-            this.txtOzelNot.Multiline = true;
-            this.txtOzelNot.Name = "txtOzelNot";
-            this.txtOzelNot.Size = new System.Drawing.Size(665, 302);
-            this.txtOzelNot.TabIndex = 0;
+            this.dataGridOzelNot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridOzelNot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOzelNot.Location = new System.Drawing.Point(7, 20);
+            this.dataGridOzelNot.Name = "dataGridOzelNot";
+            this.dataGridOzelNot.Size = new System.Drawing.Size(664, 301);
+            this.dataGridOzelNot.TabIndex = 0;
             // 
             // bntOzelNotGuncelle
             // 
@@ -85,8 +89,9 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOzelNot";
             this.Text = "frmOzelNot";
+            this.Load += new System.EventHandler(this.frmOzelNot_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOzelNot)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,8 +99,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtOzelNot;
         private System.Windows.Forms.Button btnOzelNotEkle;
         private System.Windows.Forms.Button bntOzelNotGuncelle;
+        private System.Windows.Forms.DataGridView dataGridOzelNot;
     }
 }

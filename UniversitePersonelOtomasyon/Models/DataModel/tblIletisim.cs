@@ -20,5 +20,7 @@ namespace UniversitePersonelOtomasyon.Models.DataModel
         public string cep_Tel { get; set; }
         public string e_Posta { get; set; }
         public Nullable<int> personel_ID { get; set; }
+        public Nullable<int> il_ID { get; set; }
+        public Nullable<int> ilce_ID { get; set; }
     }
 }

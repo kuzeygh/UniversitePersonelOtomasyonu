@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtYayinTuru = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtYayinAdi = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateYayinTarihi = new System.Windows.Forms.DateTimePicker();
-            this.txtPuan = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnFaaliyetEkleme = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPuan = new System.Windows.Forms.TextBox();
+            this.dateYayinTarihi = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtYayinAdi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtYayinTuru = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,60 +59,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Faaliyet Ekle";
             // 
-            // label1
+            // btnFaaliyetEkleme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Yayin Türü";
-            // 
-            // txtYayinTuru
-            // 
-            this.txtYayinTuru.Location = new System.Drawing.Point(94, 32);
-            this.txtYayinTuru.Name = "txtYayinTuru";
-            this.txtYayinTuru.Size = new System.Drawing.Size(179, 20);
-            this.txtYayinTuru.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Adı";
-            // 
-            // txtYayinAdi
-            // 
-            this.txtYayinAdi.Location = new System.Drawing.Point(94, 69);
-            this.txtYayinAdi.Name = "txtYayinAdi";
-            this.txtYayinAdi.Size = new System.Drawing.Size(179, 20);
-            this.txtYayinAdi.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Yayın Tarihi";
-            // 
-            // dateYayinTarihi
-            // 
-            this.dateYayinTarihi.Location = new System.Drawing.Point(94, 106);
-            this.dateYayinTarihi.Name = "dateYayinTarihi";
-            this.dateYayinTarihi.Size = new System.Drawing.Size(179, 20);
-            this.dateYayinTarihi.TabIndex = 5;
-            // 
-            // txtPuan
-            // 
-            this.txtPuan.Location = new System.Drawing.Point(94, 141);
-            this.txtPuan.Name = "txtPuan";
-            this.txtPuan.Size = new System.Drawing.Size(179, 20);
-            this.txtPuan.TabIndex = 6;
+            this.btnFaaliyetEkleme.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
+            this.btnFaaliyetEkleme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFaaliyetEkleme.Location = new System.Drawing.Point(202, 167);
+            this.btnFaaliyetEkleme.Name = "btnFaaliyetEkleme";
+            this.btnFaaliyetEkleme.Size = new System.Drawing.Size(71, 51);
+            this.btnFaaliyetEkleme.TabIndex = 11;
+            this.btnFaaliyetEkleme.UseVisualStyleBackColor = true;
+            this.btnFaaliyetEkleme.Click += new System.EventHandler(this.btnFaaliyetEkleme_Click);
             // 
             // label4
             // 
@@ -123,15 +79,61 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Puan";
             // 
-            // btnFaaliyetEkleme
+            // txtPuan
             // 
-            this.btnFaaliyetEkleme.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.save;
-            this.btnFaaliyetEkleme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFaaliyetEkleme.Location = new System.Drawing.Point(202, 167);
-            this.btnFaaliyetEkleme.Name = "btnFaaliyetEkleme";
-            this.btnFaaliyetEkleme.Size = new System.Drawing.Size(71, 51);
-            this.btnFaaliyetEkleme.TabIndex = 11;
-            this.btnFaaliyetEkleme.UseVisualStyleBackColor = true;
+            this.txtPuan.Location = new System.Drawing.Point(94, 141);
+            this.txtPuan.Name = "txtPuan";
+            this.txtPuan.Size = new System.Drawing.Size(179, 20);
+            this.txtPuan.TabIndex = 6;
+            // 
+            // dateYayinTarihi
+            // 
+            this.dateYayinTarihi.Location = new System.Drawing.Point(94, 106);
+            this.dateYayinTarihi.Name = "dateYayinTarihi";
+            this.dateYayinTarihi.Size = new System.Drawing.Size(179, 20);
+            this.dateYayinTarihi.TabIndex = 5;
+            this.dateYayinTarihi.ValueChanged += new System.EventHandler(this.dateYayinTarihi_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Yayın Tarihi";
+            // 
+            // txtYayinAdi
+            // 
+            this.txtYayinAdi.Location = new System.Drawing.Point(94, 69);
+            this.txtYayinAdi.Name = "txtYayinAdi";
+            this.txtYayinAdi.Size = new System.Drawing.Size(179, 20);
+            this.txtYayinAdi.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Adı";
+            // 
+            // txtYayinTuru
+            // 
+            this.txtYayinTuru.Location = new System.Drawing.Point(94, 32);
+            this.txtYayinTuru.Name = "txtYayinTuru";
+            this.txtYayinTuru.Size = new System.Drawing.Size(179, 20);
+            this.txtYayinTuru.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Yayin Türü";
             // 
             // frmBilimselFaaliyetEkle
             // 

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PersonelOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PersonelOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblAtamalar">
           <Key>
             <PropertyRef Name="atama_ID" />
@@ -55,6 +55,7 @@
           </Key>
           <Property Name="departman_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="departman" Type="nvarchar" MaxLength="50" />
+          <Property Name="fakulte_ID" Type="int" />
         </EntityType>
         <EntityType Name="tblEgitim">
           <Key>
@@ -137,6 +138,8 @@
           <Property Name="cep_Tel" Type="nvarchar" MaxLength="50" />
           <Property Name="e_Posta" Type="nvarchar" MaxLength="50" />
           <Property Name="personel_ID" Type="int" />
+          <Property Name="il_ID" Type="int" />
+          <Property Name="ilce_ID" Type="int" />
         </EntityType>
         <EntityType Name="tblIller">
           <Key>
@@ -334,8 +337,7 @@
           <EntitySet Name="tblVerilisNedeni" EntityType="Self.tblVerilisNedeni" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblYabanciDil" EntityType="Self.tblYabanciDil" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PersonelOtomasyonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -389,6 +391,7 @@
           </Key>
           <Property Name="departman_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="departman" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fakulte_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="tblEgitim">
           <Key>
@@ -471,6 +474,8 @@
           <Property Name="cep_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="e_Posta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="personel_ID" Type="Int32" />
+          <Property Name="il_ID" Type="Int32" />
+          <Property Name="ilce_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="tblIller">
           <Key>
@@ -636,7 +641,7 @@
           <Property Name="puan" Type="Int32" />
           <Property Name="personel_ID" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="PersonelOtomasyonDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PersonelOtomasyonDBEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tblAtamalar" EntityType="Self.tblAtamalar" />
           <EntitySet Name="tblCezaBilgiler" EntityType="Self.tblCezaBilgiler" />
           <EntitySet Name="tblCinsiyet" EntityType="Self.tblCinsiyet" />
@@ -673,7 +678,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PersonelOtomasyonDBModelStoreContainer" CdmEntityContainer="PersonelOtomasyonDBEntities">
+        <EntityContainerMapping StorageEntityContainer="PersonelOtomasyonDBModelStoreContainer" CdmEntityContainer="PersonelOtomasyonDBEntities2">
           <EntitySetMapping Name="tblAtamalar">
             <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblAtamalar">
               <MappingFragment StoreEntitySet="tblAtamalar">
@@ -725,6 +730,7 @@
           <EntitySetMapping Name="tblDepartman">
             <EntityTypeMapping TypeName="PersonelOtomasyonDBModel.tblDepartman">
               <MappingFragment StoreEntitySet="tblDepartman">
+                <ScalarProperty Name="fakulte_ID" ColumnName="fakulte_ID" />
                 <ScalarProperty Name="departman_ID" ColumnName="departman_ID" />
                 <ScalarProperty Name="departman" ColumnName="departman" />
               </MappingFragment>
@@ -817,6 +823,8 @@
                 <ScalarProperty Name="cep_Tel" ColumnName="cep_Tel" />
                 <ScalarProperty Name="e_Posta" ColumnName="e_Posta" />
                 <ScalarProperty Name="personel_ID" ColumnName="personel_ID" />
+                <ScalarProperty Name="il_ID" ColumnName="il_ID" />
+                <ScalarProperty Name="ilce_ID" ColumnName="ilce_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

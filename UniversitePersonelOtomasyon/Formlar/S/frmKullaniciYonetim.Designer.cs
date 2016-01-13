@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bntIzınEkle = new System.Windows.Forms.Button();
             this.dataGridKullanicilar = new System.Windows.Forms.DataGridView();
+            this.bntIzınEkle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridKullanicilar)).BeginInit();
             this.SuspendLayout();
@@ -45,8 +45,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanicilar";
             // 
+            // dataGridKullanicilar
+            // 
+            this.dataGridKullanicilar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridKullanicilar.Location = new System.Drawing.Point(6, 19);
+            this.dataGridKullanicilar.Name = "dataGridKullanicilar";
+            this.dataGridKullanicilar.Size = new System.Drawing.Size(442, 263);
+            this.dataGridKullanicilar.TabIndex = 8;
+            // 
             // bntIzınEkle
             // 
+            this.bntIzınEkle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bntIzınEkle.BackgroundImage = global::UniversitePersonelOtomasyon.Properties.Resources.add;
             this.bntIzınEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bntIzınEkle.Location = new System.Drawing.Point(408, 17);
@@ -54,14 +66,6 @@
             this.bntIzınEkle.Size = new System.Drawing.Size(58, 47);
             this.bntIzınEkle.TabIndex = 7;
             this.bntIzınEkle.UseVisualStyleBackColor = true;
-            // 
-            // dataGridKullanicilar
-            // 
-            this.dataGridKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridKullanicilar.Location = new System.Drawing.Point(6, 19);
-            this.dataGridKullanicilar.Name = "dataGridKullanicilar";
-            this.dataGridKullanicilar.Size = new System.Drawing.Size(442, 263);
-            this.dataGridKullanicilar.TabIndex = 8;
             // 
             // frmKullaniciYonetim
             // 
@@ -72,6 +76,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmKullaniciYonetim";
             this.Text = "frmKullaniciYonetim";
+            this.Load += new System.EventHandler(this.frmKullaniciYonetim_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridKullanicilar)).EndInit();
             this.ResumeLayout(false);
